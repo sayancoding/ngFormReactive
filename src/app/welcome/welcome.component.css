@@ -1,0 +1,50 @@
+.cover
+{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url(../../assets/backgroundCover.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.overlay
+{
+  position: relative;
+  background-image: linear-gradient(to right, #6b11cbd5 0%, #2574fccb 100%);;
+  width: 100%;
+  height: 100%;
+}
+.center-container
+{
+  
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 99;
+}
+.text-btn
+{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 99; 
+}
+
+.centerImg
+{
+  margin-top: -18px;
+  animation: shake 0.7s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes shake
+{
+  0%{
+    margin-top: 18px;
+  }
+  100%{
+    margin-top: -18px;
+  }
+}
