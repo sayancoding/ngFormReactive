@@ -6,4 +6,48 @@
   background-image: url(../../assets/flat-4041617_1920.png);
   background-position: center;
   background-size: cover;
+  z-index: 12;
+}
+.card
+{
+  background: linear-gradient(to right, #47038fbe 0%, #2574fcbb 100%);
+}
+label{
+  color: #fff;
+}
+input[type='text'],
+input[type='email'],
+input[type='password']
+{
+  background-color: #ffffff;
+  padding: 12px 12px;
+  width: 20rem;
+  height: 3rem;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-top: 6px;
+}
+p.error
+{
+  display: none;
+}
+p.errorCheck
+{
+  color: rgb(255, 125, 125);
+  transition: 1s ease-in-out;
+}
+
+input.ng-touched.ng-invalid + p.error {
+  display: block;
+  color: rgb(255, 125, 125);
+  transition: 1s ease-in-out;
+}
+input.ng-touched.ng-invalid .errorCheck {
+  display: block;
+  transition: 1s ease-in-out;
+}
+button:disabled
+{
+  background-color: rgb(168, 168, 168);
+  cursor: not-allowed;
 }

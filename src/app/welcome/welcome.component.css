@@ -3,7 +3,7 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  background-image: url(../../assets/backgroundCover.jpg);
+  background-image: url(https://www.decolore.net/wp-content/uploads/2019/02/online-business-flat-design-style-illustration.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -11,7 +11,7 @@
 .overlay
 {
   position: relative;
-  background-image: linear-gradient(to right, #6b11cbd5 0%, #2574fccb 100%);;
+  background-image: linear-gradient(to right, #be0a73cb 0%, #2529fccb 100%);
   width: 100%;
   height: 100%;
 }

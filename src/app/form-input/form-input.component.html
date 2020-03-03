@@ -1,6 +1,77 @@
 <div class="container-form">
-  <div class="card">
-    <input type="text" name="firstName">
-    <input type="text" name="lastName">
+  <div class="card mx-32 p-8 my-10 rounded shadow-md">
+    <h1 class="text-center text-2xl font-bold">Create Account</h1>
+
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmitted()">
+      <div class="flex flex-wrap  just justify-center ">
+        <div class="left-side mx-4">
+          <div class="mt-4">
+            <label for="firstName">First Name</label>
+            <br />
+            <input type="text" name="firstName" 
+            formControlName='firstName'
+            />
+            <p class="error" *ngIf="registrationForm.get('firstName').errors?.required">☹ First Name is required !</p>
+            <p class="errorCheck" *ngIf="registrationForm.get('firstName').errors?.pattern">☹ Use Characters only !</p>
+          </div>
+          <div class="mt-4">
+            <label for="email">Email</label>
+            <br />
+            <input type="email" name="email" 
+            formControlName='email'
+            />
+            <p class="error" *ngIf="registrationForm.get('email').errors?.required">☹ Email is required !</p>
+            <p class="errorCheck" *ngIf="registrationForm.get('email').errors?.pattern">☹ Not proper email id</p>
+          </div>
+          <div class="mt-4">
+            <label for="setPwd">Set Password</label>
+            <br />
+            <input type="password" name="setPwd" 
+            formControlName='setPwd'
+            />
+            <p class="error" *ngIf="registrationForm.get('email').errors?.required">☹ Please set Password !</p>
+          </div>
+        </div>
+        <div class="right-side mx-4">
+          <div class="mt-4">
+            <label for="lastName">Last Name</label>
+            <br />
+            <input type="text" name="lastName" 
+            formControlName='lastName'
+            />
+            <p class="error" *ngIf="registrationForm.get('lastName').errors?.required">☹ Last Name is required !</p>
+            <p class="errorCheck" *ngIf="registrationForm.get('lastName').errors?.pattern">☹ Use Characters only !</p>
+          </div>
+          <div class="mt-4">
+            <label for="contactNo">Contact No</label>
+            <br />
+            <input type="text" name="contactNo" 
+            formControlName='contactNo'
+            />
+            <p class="error" *ngIf="registrationForm.get('contactNo').errors?.required">☹ Contact No is required !</p>
+            <p class="errorCheck" *ngIf="registrationForm.get('contactNo').errors?.pattern">☹ Use numbers only !</p>
+            <p class="errorCheck" *ngIf="registrationForm.get('contactNo').errors?.minlength">☹ minimum len 10  !</p>
+          </div>
+          <div class="mt-4">
+            <label for="confirmPwd">Confirm Password</label>
+            <br />
+            <input type="password" name="confirmPwd" 
+            formControlName='confirmPwd'
+            />
+            <p class="error" *ngIf="registrationForm.get('confirmPwd').invalid">☹ Password is not matched !</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <button
+          [disabled]="!registrationForm.valid"
+          type="submit"
+          class="bg-white px-4 py-1 mt-5 rounded shadow-md font-semibold hover:shadow-lg"
+        >
+          Next
+        </button>
+      </div>
+    </form>
+
   </div>
 </div>
